@@ -5,14 +5,14 @@
     <div class="forms__login">
         <h2>Hello World!</h2>
 
-        <input type="text" placeholder="Digite seu nome..." [(ngModel)]="name">
         <p> Olá, meu nome é {{ name }}</p>
+        <input type="text" placeholder="Digite seu nome..." [(ngModel)]="name">
         <input type="text" placeholder="Digite sua senha..." [(ngModel)]="senha">
 
         <div *ngIf="mostrarTexto">
             <h1> OLHA O TEXTO! </h1>
         </div>
-        
+
         <button (click)="mostrarTexto = !mostrarTexto"> Mostrar Texto</button>
         <button [routerLink]="['/home']"> Mudar </button>
     </div>
