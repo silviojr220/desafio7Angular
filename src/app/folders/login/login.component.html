@@ -1,14 +1,19 @@
-<h2>Hello World!</h2>
+<div class="login__page">
+    <div class="imagem__login">
+        <img src="/ranger.png" alt="ford__ranger">
+    </div>
+    <div class="forms__login">
+        <h2>Hello World!</h2>
 
-<input type="text" placeholder="Digite seu nome..." [(ngModel)]="name">
-<p> Olá, meu nome é {{ name }}</p>
+        <input type="text" placeholder="Digite seu nome..." [(ngModel)]="name">
+        <p> Olá, meu nome é {{ name }}</p>
+        <input type="text" placeholder="Digite sua senha..." [(ngModel)]="senha">
 
-<div *ngIf="mostrarTexto">
-    <h1> OLHA O TEXTO! </h1>
+        <div *ngIf="mostrarTexto">
+            <h1> OLHA O TEXTO! </h1>
+        </div>
+        
+        <button (click)="mostrarTexto = !mostrarTexto"> Mostrar Texto</button>
+        <button [routerLink]="['/home']"> Mudar </button>
+    </div>
 </div>
-
-<br>
-<button (click)="mostrarTexto = !mostrarTexto"> Mostrar Texto</button>
-<br>
-<br>
-<button [routerLink]="['/home']"> Mudar </button>

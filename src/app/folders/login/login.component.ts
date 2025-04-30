@@ -11,6 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class LoginComponent {
   name: string = '';
+  senha: string = '';
 
   mostrarTexto: boolean = false;
 }
