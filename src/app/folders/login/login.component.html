@@ -1,0 +1,14 @@
+<h2>Hello World!</h2>
+
+<input type="text" placeholder="Digite seu nome..." [(ngModel)]="name">
+<p> Olá, meu nome é {{ name }}</p>
+
+<div *ngIf="mostrarTexto">
+    <h1> OLHA O TEXTO! </h1>
+</div>
+
+<br>
+<button (click)="mostrarTexto = !mostrarTexto"> Mostrar Texto</button>
+<br>
+<br>
+<button [routerLink]="['/home']"> Mudar </button>
