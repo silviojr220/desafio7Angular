@@ -6,18 +6,18 @@ export const routes: Routes = [
     {
         path: 'login',
         component: LoginComponent
-    },
-    {
+    }, {
         path: 'home',
         component: HomeComponent
     },
+
     {
-        path:'',
+        path: '',
         redirectTo: '/login',
-        pathMatch:'full'
+        pathMatch: 'full'
     },
     {
         path: '**',
         redirectTo: '/login',
-    }
+    },
 ];

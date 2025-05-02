@@ -38,3 +38,19 @@
         }
     }
 }
+
+.imgForms {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.alerta__validacao {
+    color: red;
+}

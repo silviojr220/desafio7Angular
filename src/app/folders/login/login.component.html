@@ -2,18 +2,36 @@
     <div class="imagem__login">
         <img src="/ranger.png" alt="ford__ranger">
     </div>
+
     <div class="forms__login">
-        <h2>Hello World!</h2>
-
-        <p> Olá, meu nome é {{ name }}</p>
-        <input type="text" placeholder="Digite seu nome..." [(ngModel)]="name">
-        <input type="text" placeholder="Digite sua senha..." [(ngModel)]="senha">
-
-        <div *ngIf="mostrarTexto">
-            <h1> OLHA O TEXTO! </h1>
+        <div class="imgForms">
+            <img src="/ford.png" alt="logo_ford">
         </div>
+        <h2>Boas-Vindas</h2>
+        <form [formGroup]="userForms" (ngSubmit)="onUserSave()">
+            <p> Olá, meu nome é {{ userObj.name }}</p>
+            <input type="text" placeholder="Digite seu nome..." [(ngModel)]="userObj.name" formControlName="name">
+            <div class="alerta__validacao"
+                *ngIf="userForms.controls['name'].errors?.['required'] && userForms.controls['name'].touched">
+                <span>Isso precisa ser preenchido!</span>
+            </div>
 
-        <button (click)="mostrarTexto = !mostrarTexto"> Mostrar Texto</button>
-        <button [routerLink]="['/home']"> Mudar </button>
+            <input type="text" placeholder="Digite sua senha..." [(ngModel)]="userObj.senha" formControlName="password" >
+            <div class="alerta__validacao"
+                *ngIf="userForms.controls['password'].errors?.['required'] && userForms.controls['password'].touched">
+
+                <span>Isso precisa ser preenchido!</span>
+            </div>
+            <div class="alerta__validacao"
+                *ngIf="userForms.controls['password'].errors?.['minlength'] && userForms.controls['password'].touched">
+                <span>Senha deve ter no mínimo 6 caracteres!</span>
+            </div>
+
+            <div *ngIf="mostrarTexto">
+                <h1>CLIQUE AQUI {{ userObj.name }}!</h1>
+            </div>
+            <button [routerLink]="['/home']" (click)="onUserSave()"> Logar </button>
+        </form>
+        <button (click)="mostrarTexto = !mostrarTexto" [(ngModel)]="userObj.name"> Mostrar Texto na Tela...</button>
     </div>
 </div>
