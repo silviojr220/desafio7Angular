@@ -1,0 +1,26 @@
+<form [formGroup]="formLogin" (ngSubmit)="userSave()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label" for="nome">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="user" name="user" required>
+        <div class="text-danger">
+            <span *ngIf="formLogin.controls['user'].errors?.['required'] && formLogin.controls['user'].touched">
+                Isso é obrigatório
+              </span>              
+        </div>
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" required>
+        <div class="text-danger">
+            <span *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
+                Isso é obrigatório
+              </span>
+        </div>
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" [disabled]="formLogin.invalid" class="btn btn-primary" >Login</button>
+</form>
