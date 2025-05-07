@@ -1,17 +1,16 @@
 <form [formGroup]="formLogin" (ngSubmit)="userSave()">
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label" for="nome">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="user" name="user" required>
+        <label for="exampleInputEmail1" class="form-label" for="nome"></label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="user" name="user" placeholder="Digite aqui seu usuario*" required>
         <div class="text-danger">
             <span *ngIf="formLogin.controls['user'].errors?.['required'] && formLogin.controls['user'].touched">
                 Isso é obrigatório
               </span>              
         </div>
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" required>
+        <label for="exampleInputPassword1" class="form-label"></label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" placeholder="Digite aqui sua senha*" required>
         <div class="text-danger">
             <span *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
                 Isso é obrigatório
