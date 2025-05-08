@@ -18,7 +18,7 @@ export class FormsComponent {
 
   userForms: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    password: new FormControl('', [Validators.required, Validators.minLength(4)])
+    password: new FormControl('', [Validators.required, Validators.minLength(5)])
   });
 
   mostrarTexto: boolean = false;

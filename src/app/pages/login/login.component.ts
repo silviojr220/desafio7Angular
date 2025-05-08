@@ -9,21 +9,4 @@ import { FormsComponent } from "../../components/forms/forms.component";
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
-
-  userObj: any = {
-    name: '',
-    senha: ''
-  }
-
-  userForms: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    password: new FormControl('',[Validators.required, Validators.minLength(4)])
-  });
-
-  onUserSave(){
-    const formValue = this.userForms.value;
-  }
-
-  mostrarTexto: boolean = false;
-} 
+export class LoginComponent {} 

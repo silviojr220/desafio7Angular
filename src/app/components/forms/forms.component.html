@@ -15,6 +15,10 @@
             <span *ngIf="userForms.controls['password'].errors?.['required'] && userForms.controls['password'].touched">
                 Isso é obrigatório
               </span>
+              <div class="alerta__validacao"
+              *ngIf="userForms.controls['password'].errors?.['minlength'] && userForms.controls['password'].touched">
+              <span>Senha deve ter no mínimo 5 caracteres!</span>
+          </div>
         </div>
     </div>
     <div class="mb-3 form-check">
