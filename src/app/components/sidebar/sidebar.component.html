@@ -1,0 +1,33 @@
+<header class="bg-primary text-white text-center p-3 shadow border-bottom">
+  <div class="d-flex justify-content-between align-itens-center">
+    <a class="btn btn-outline-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+      aria-controls="offcanvasExample">Menu</a>
+
+
+    <button [routerLink]="['/login']" class="btn btn-outline-light"> Logout </button>
+
+    <!-- SideBar-Header -->
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <img src="ford.png" style="width: 100px;">
+        <!-- <h5 class="offcanvas-title " id="offcanvasExampleLabel">Menu</h5> -->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <!-- SideBar-Body -->
+      <div class="offcanvas-body">
+        
+        <li class="list-group-item py-2 hover-bg-light">
+          <i class="bi bi-coluns me-2 text-primary" style="transition: transform 0.3 ease;"></i>
+          <a routerLink="/home"> Home </a>
+        </li>
+        <li class="list-group-item py-2 hover-bg-light">
+          <i class="bi bi-coluns me-2 text-primary" style="transition: transform 0.3 ease;"></i>
+          <a routerLink="/dashboard">Dashboard</a>
+        </li>
+
+      </div>
+    </div>
+  </div>
+</header>
