@@ -1,16 +1,15 @@
 <app-sidebar></app-sidebar>
-<div class="container-fluid d-flex justify-content-center">
+<div *ngIf="selectorVehicles" class="container-fluid d-flex justify-content-center">
 
     <!-- Seletor-de-Carros -->
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
-            <select name="carSelector">
-                <option value="">Selecione o veículo</option>
-                <option value="">Bronco Sport</option>
-                <option value="">Mustang</option>
-                <option value="">Ranger</option>
-                <option value="">Territory</option>
+            <select id="carSelector" name="carSelector" class="form-select shadow-sm" [(ngModel)]="seletorDeCarros"
+                (change)="carroSelecionado()">
+                <option [value]="i" *ngFor="let v of veiculos; index as i">
+                    {{v.vehicle}}
+                </option>
             </select>
         </div>
 
@@ -18,7 +17,7 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Total de Vendas</h5>
-                <p class="card-text"></p>
+                <p class="card-text">{{ selectorVehicles.volumetotal }}</p>
                 <p class="card-text">Unid.</p>
             </div>
         </div>
@@ -27,7 +26,7 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Conectados</h5>
-                <p class="card-text"></p>
+                <p class="card-text">{{ selectorVehicles.connected }}</p>
                 <p class="card-text">Unid.</p>
             </div>
         </div>
@@ -36,8 +35,18 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Unidade Software</h5>
-                <p class="card-text"></p>
+                <p class="card-text"> {{ selectorVehicles.softwareUpdates }}</p>
                 <p class="card-text">Unid.</p>
             </div>
         </div>
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"> Imagem do Veículo </h5>
+                <img class="img-fluid" *ngIf="selectorVehicles.img" [src]="selectorVehicles.img"
+                    alt="Imagem de {{ selectorVehicles.vehicle }}" style="max-height: 100%;">
+            </div>
+        </div>
     </div>
+    <app-vin></app-vin>
+</div>

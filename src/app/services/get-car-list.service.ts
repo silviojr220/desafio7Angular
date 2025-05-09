@@ -12,7 +12,7 @@ export class GetCarListService {
 
   constructor(private http: HttpClient) { }
   
-  getCarList():Observable <Veiculo> {
-    return this.http.get<{ vehicles: Veiculo }>(this.carros).pipe(map(resp => resp.vehicles))
+  getCarList():Observable <Veiculo[]> {
+    return this.http.get<{ vehicles: Veiculo[] }>(this.carros).pipe(map(resp => resp.vehicles))
   }
 }

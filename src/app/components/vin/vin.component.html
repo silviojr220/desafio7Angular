@@ -1,0 +1,31 @@
+<table class="table">
+  <!-- Head -->
+  <thead>
+    <tr>
+      <th scope="col">Codigo-Vin</th>
+      <th scope="col">odometro</th>
+      <th scope="col">nivelCombustivel</th>
+      <th scope="col">status</th>
+      <th scope="col">lat</th>
+      <th scope="col">Long</th>
+    </tr>
+  </thead>
+  <!-- Body -->
+  <tbody>
+    <tr *ngIf="veiculosDetalhado; else semDados">
+      <td>{{ veiculosDetalhado.id}}</td>
+      <td>{{ veiculosDetalhado.odometro}}</td>
+      <td>{{ veiculosDetalhado.nivelCombustivel}}</td>
+      <td>{{ veiculosDetalhado.status}}</td>
+      <td>{{ veiculosDetalhado.lat}}</td>
+      <td>{{ veiculosDetalhado.long}}</td>
+    </tr>
+  </tbody>
+  <input [formControl]="barraDePesquisa" name="pesquisa" type="text" class="formControl" placeholder="Pesquise pelo VIN"
+    (input)="pesquisar()">
+</table>
+<ng-template #semDados>
+  <div class="alert alert-warning text-center" role="alert">
+    Nenhum dado encontrado para esse vin.
+  </div>
+</ng-template>
