@@ -8,7 +8,7 @@
 :host {
     display: flex;
     flex-direction: column;
-    background-image: url("/mustang.png");
+    background-image: url("http://localhost:3001/img/mustang.png");
     background-repeat: no-repeat;
     height: 100%;
     background-position: center;
