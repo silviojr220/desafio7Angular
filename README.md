@@ -12,7 +12,6 @@ Este é um projeto desenvolvido com o framework Angular, utilizando Node.js como
 
 Antes de iniciar, verifique se você tem os seguintes softwares instalados em sua máquina:
 
-- [Node.js (versão LTS recomendada)](https://nodejs.org/)
 - [Angular CLI](https://angular.io/cli)
 - [Git (opcional, mas recomendado)](https://git-scm.com/)
 
