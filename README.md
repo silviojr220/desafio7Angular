@@ -4,8 +4,8 @@ Este é um projeto desenvolvido com o framework Angular, utilizando Node.js como
 
 ## 🧰 Tecnologias Utilizadas
 
-- [Angular](https://angular.io/) - 
-- [Node.js](https://nodejs.org/) - 
+- [Angular](https://angular.io/) - 19.2.9
+- [Node.js](https://nodejs.org/) - 10.9.2
 - [Bootstrap](https://getbootstrap.com/) - 5.3.6
 
 ## ⚙️ Pré-requisitos
