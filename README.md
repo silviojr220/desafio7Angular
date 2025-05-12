@@ -20,7 +20,9 @@ Você pode verificar se já possui o Node.js instalado com o comando:
 
 ```bash
 node -v
+```
 
 E o npm (gerenciador de pacotes que vem com o Node.js):
-
+```bash
 npm -v
+```
