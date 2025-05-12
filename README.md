@@ -50,12 +50,17 @@ npm install
 npm install bootstrap
 ```
 
-E adicione o CSS do Bootstrap no arquivo angular.json:
+Adicione o CSS do Bootstrap no arquivo angular.json:
 ```bash
-"styles": [
-  "node_modules/bootstrap/dist/css/bootstrap.min.css",
-  "src/styles.css"
+"src/styles.css",
+"node_modules/bootstrap/dist/css/bootstrap.min.css"
 ],
+```
+E o JS do Bootstrap também, no mesmo aqui:
+```bash
+ "scripts": [
+"node_modules/bootstrap/dist/js/bootstrap.min.js"
+]
 ```
 
 5. Inicie o servidor de desenvolvimento:
