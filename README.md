@@ -1,4 +1,4 @@
-# Projeto Angular com Node.js e Bootstrap
+ <strong># Desafio 7 - Sprint Angular</strong>
 
 Este é um projeto desenvolvido com o framework Angular, utilizando Node.js como ambiente de execução e o Bootstrap para estilização da interface. Este README fornece um guia passo a passo para configurar o ambiente e executar o projeto localmente.
 
