@@ -27,8 +27,9 @@ E o npm (gerenciador de pacotes que vem com o Node.js):
 npm -v
 ```
 🚀 Instalação
-
 Siga os passos abaixo para configurar e executar o projeto localmente:
+
+1. Clone o repositório
 
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio-angular.git
@@ -39,11 +40,20 @@ cd seu-repositorio-angular
 ```bash
 npm install -g @angular/cli
 ```
+
 3. Instale as dependências do projeto:
 ```bash
 npm install
 ```
+
 4. Instale o Bootstrap:
 ```bash
 npm install bootstrap
+```
+E adicione o CSS do Bootstrap no arquivo angular.json:
+´´´bash
+"styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"
+],
 ```
