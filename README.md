@@ -26,3 +26,16 @@ E o npm (gerenciador de pacotes que vem com o Node.js):
 ```bash
 npm -v
 ```
+🚀 Instalação
+
+Siga os passos abaixo para configurar e executar o projeto localmente:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio-angular.git
+cd seu-repositorio-angular
+```
+
+2. Instale o Angular CLI (caso ainda não tenha instalado):
+```bash
+npm install -g @angular/cli
+```
