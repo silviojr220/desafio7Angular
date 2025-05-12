@@ -49,14 +49,19 @@ npm install
 ```bash
 npm install bootstrap
 ```
+E importe os icones do bootstrap, no index.html:
+```bash
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+```
 
-Adicione o CSS do Bootstrap no arquivo angular.json:
+Adicione o CSS do Bootstrap (e tambpem os icons) no arquivo angular.json:
 ```bash
 "src/styles.css",
 "node_modules/bootstrap/dist/css/bootstrap.min.css"
 ],
 ```
-E o JS do Bootstrap também, no mesmo aqui:
+E o JS do Bootstrap também, no mesmo arquivo:
 ```bash
  "scripts": [
 "node_modules/bootstrap/dist/js/bootstrap.min.js"
